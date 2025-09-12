@@ -180,23 +180,6 @@
         correctLevel: QRCode.CorrectLevel.H
       });
 
-      // Função para criar árvore caindo 🌳
-      function createEmoji() {
-        const emoji = document.createElement("div");
-        emoji.classList.add("emoji");
-        emoji.textContent = "🌳"; // pode trocar por 🍃 ou 🌱
-        emoji.style.left = Math.random() * 100 + "vw";
-        emoji.style.animationDuration = (Math.random() * 3 + 3) + "s"; // velocidade
-        document.body.appendChild(emoji);
-
-        // remover depois de cair
-        setTimeout(() => {
-          emoji.remove();
-        }, 6000);
-      }
-
-      // Criar árvores a cada 500ms
-      setInterval(createEmoji, 500);
     };
   </script>
 </body>
