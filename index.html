@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOXP: Projeto de Sustentabilidade</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0fdf4;
+      color: #620096;
+      overflow-x: hidden;
+    }
+    .container-hero {
+      background-color: #ebe7ff;
+      background-size: cover;
+      background-position: center;
+    }
+    .section-title {
+      color: #4a00aa;
+    }
+    .card {
+      background-color: #eadcfc;
+      border: 2px solid #4a00aa;
+    }
+    .btn-form {
+      background-color: #22c55e;
+      transition: transform 0.2s ease-in-out;
+    }
+    .btn-form:hover {
+      transform: scale(1.05);
+      background-color: #16a34a;
+    }
+
+    /* Emojis caindo */
+    .emoji {
+      position: fixed;
+      top: -50px;
+      font-size: 2rem;
+      animation: fall linear forwards;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.7;
+      }
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-[#620096] text-white py-4 px-6 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ECOXP</h1>
+      <nav>
+        <a href="#about" class="mx-2 hover:underline">Sobre</a>
+        <a href="#how-it-works" class="mx-2 hover:underline">Como Funciona</a>
+        <a href="#survey" class="mx-2 hover:underline">Pesquisa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section id="hero" class="container-hero py-20 text-center text-[#4a00aa]">
+      <div class="container mx-auto px-4">
+        <img src="ECOXP.png" alt="Logo ECOXP" class="mx-auto w-48 md:w-64 animate-pulse mb-6">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-md">ECOXP: Tecnologia Educacional para Hábitos Sustentáveis</h2>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto font-medium">Um projeto dos alunos do Instituto Federal do Pará (IFPA) que une tecnologia, educação e sustentabilidade.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-[#fff0ff]">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h3 class="section-title text-3xl md:text-4xl font-bold mb-8">Sobre o Projeto</h3>
+        <p class="text-lg leading-relaxed text-[#620096]">
+          Os problemas ambientais estão crescendo e a educação ambiental é uma ferramenta fundamental para reverter essa situação. O ECOXP é um aplicativo interativo que busca integrar a educação ambiental, a tecnologia digital e a gamificação para promover a mudança de atitudes.
+        </p>
+        <p class="text-lg mt-4 leading-relaxed text-[#620096]">
+          Desenvolvido por Layne Souza, Débora Thaissa e Victor Leal como um Trabalho de Conclusão de Curso, o ECOXP não é apenas um jogo, mas uma ferramenta pedagógica que dialoga com escolas, famílias e comunidades, unindo responsabilidade social, inclusão digital e sustentabilidade.
+        </p>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 px-4 bg-[#fff0ff]">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h3 class="section-title text-3xl md:text-4xl font-bold mb-8">Como Funciona</h3>
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+          <div class="card p-6 rounded-lg shadow-lg">
+            <h4 class="text-2xl font-semibold mb-3">Dinâmica do Jogo</h4>
+            <p class="text-[#620096]">
+              O ECOXP combina o mundo real e virtual. O usuário encontrará pontos de coleta mapeados por GPS e, ao descartar corretamente o resíduo, registrará a ação com uma foto no aplicativo, ganhando pontos e reforçando a importância da prática.
+            </p>
+          </div>
+          <div class="card p-6 rounded-lg shadow-lg">
+            <h4 class="text-2xl font-semibold mb-3">Pontuação e Ranking</h4>
+            <p class="text-[#620096]">
+              Cada ação sustentável gera pontos, e o ranking motivará uma competição saudável. Há categorias separadas para adultos e menores de 12 anos, garantindo equidade e segurança.
+            </p>
+          </div>
+          <div class="card p-6 rounded-lg shadow-lg">
+            <h4 class="text-2xl font-semibold mb-3">Inclusão e Acessibilidade</h4>
+            <p class="text-[#620096]">
+              O aplicativo contará com o VLibras para traduzir o conteúdo para Libras, tornando a experiência acessível a pessoas surdas. Nosso compromisso é com a inclusão universal.
+            </p>
+          </div>
+          <div class="card p-6 rounded-lg shadow-lg">
+            <h4 class="text-2xl font-semibold mb-3">Papel do Responsável</h4>
+            <p class="text-[#620096]">
+              Para menores de 12 anos, um responsável poderá monitorar o tempo de uso, as fotos enviadas e a pontuação, garantindo um uso seguro e equilibrado da tecnologia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Survey Section -->
+    <section id="survey" class="py-16 px-4 bg-[#dcfce7] text-center">
+      <div class="container mx-auto max-w-2xl">
+        <h3 class="section-title text-3xl md:text-4xl font-bold mb-6" style="color: #166534;">
+          Sua Opinião é Fundamental
+        </h3>
+
+        <p class="text-lg mb-8 leading-relaxed text-[#166534]">
+          Para que o ECOXP se torne uma ferramenta ainda mais poderosa, estamos coletando dados para a nossa pesquisa. Sua resposta é essencial para validarmos e aprimorarmos o projeto. O formulário possui apenas 6 perguntas de múltipla escolha e 1 discursiva opcional.
+        </p>
+        <p class="text-lg mb-8 leading-relaxed text-[#166534]">
+          <span class="font-bold">Se você está em uma das escolas parceiras, escaneie o QR Code abaixo para ir diretamente ao formulário.</span>
+        </p>
+
+        <div class="flex flex-col items-center space-y-4 mb-8">
+          <div id="qrcode" class="p-4 bg-white rounded-lg shadow-md border-2 border-emerald-500"></div>
+        </div>
+
+        <p class="text-sm italic text-[#166534] mb-6">
+          Se preferir, clique no botão abaixo para acessar o formulário diretamente.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0rCSpL3FjA00ytSBBuiImwReuUPFetYUgd9ic27PKAtFTNQ/viewform?usp=header" target="_blank" class="btn-form inline-block py-3 px-8 text-white font-bold rounded-full shadow-lg">
+          Responder ao Formulário
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#166534] text-white py-8 px-6 mt-auto">
+    <div class="container mx-auto text-center">
+      <p class="text-sm md:text-base mb-2">&copy; 2025 ECOXP. Todos os direitos reservados.</p>
+      <p class="text-sm md:text-base">Projeto Integrador - Técnico em Desenvolvimento de Sistemas</p>
+      <p class="text-sm md:text-base">Instituto Federal do Pará (IFPA), Campus Belém</p>
+      <p class="text-sm mt-4">
+        Desenvolvido por: Layne Souza de Araújo, Débora Thaissa Santiago dos Santos, Victor Leal Machado
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    window.onload = function() {
+      // URL do formulário para o QR Code
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe0rCSpL3FjA00ytSBBuiImwReuUPFetYUgd9ic27PKAtFTNQ/viewform?usp=header";
+      
+      // Gerar o QR Code
+      new QRCode(document.getElementById("qrcode"), {
+        text: formUrl,
+        width: 256,
+        height: 256,
+        colorDark: "#166534",
+        colorLight: "#dcfce7",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+
+      // Função para criar árvore caindo 🌳
+      function createEmoji() {
+        const emoji = document.createElement("div");
+        emoji.classList.add("emoji");
+        emoji.textContent = "🌳"; // pode trocar por 🍃 ou 🌱
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.animationDuration = (Math.random() * 3 + 3) + "s"; // velocidade
+        document.body.appendChild(emoji);
+
+        // remover depois de cair
+        setTimeout(() => {
+          emoji.remove();
+        }, 6000);
+      }
+
+      // Criar árvores a cada 500ms
+      setInterval(createEmoji, 500);
+    };
+  </script>
+</body>
+</html>
